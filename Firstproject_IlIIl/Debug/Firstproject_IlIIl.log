@@ -1,0 +1,7 @@
+﻿  Firstproject_IlIIl.cpp
+C:\Users\Student\source\repos\Firstproject_IlIIl\Firstproject_IlIIl\Firstproject_IlIIl.cpp(28,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Student\source\repos\Firstproject_IlIIl\Firstproject_IlIIl\Firstproject_IlIIl.cpp(42,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Student\source\repos\Firstproject_IlIIl\Firstproject_IlIIl\Firstproject_IlIIl.cpp(56,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Student\source\repos\Firstproject_IlIIl\Firstproject_IlIIl\Firstproject_IlIIl.cpp(9,40): warning C4101: randomNum1: неиспользованная локальная переменная
+C:\Users\Student\source\repos\Firstproject_IlIIl\Firstproject_IlIIl\Firstproject_IlIIl.cpp(9,14): warning C4101: randomNum2: неиспользованная локальная переменная
+  Firstproject_IlIIl.vcxproj -> C:\Users\Student\source\repos\Firstproject_IlIIl\Debug\Firstproject_IlIIl.exe

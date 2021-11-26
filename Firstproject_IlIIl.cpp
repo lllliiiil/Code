@@ -72,4 +72,24 @@ int main()
 
 	} while (enteredValue != -1);
 	return 0;
+	
+		unsigned int password, guessedNum = 0, symbolsAmount, symbol;
+
+	std::cin >> password;
+
+	std::string everyNuminPswd = std::to_string(password);
+
+	symbolsAmount = everyNuminPswd.size();
+
+	for (size_t i = 0; i < symbolsAmount; i++)
+	{
+		symbol = password % (int)pow(10, i+1); std::cout << symbol << " ";
+	}
+
+	while (guessedNum != password)
+	{
+		guessedNum++;
+	}
+
+	std::cout << "  " << guessedNum;
 } 

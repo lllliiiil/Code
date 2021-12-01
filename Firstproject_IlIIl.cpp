@@ -95,6 +95,8 @@ int main()
 } 
 
 
+=====================================
+
 #include <iostream>
 #include <string>
 #include <io.h>
@@ -106,4 +108,83 @@ int main()
 	_setmode(_fileno(stdout), _O_U16TEXT);
 
 	std::wcout << L"¶ ¶ ¶ ¶ ¶ ¶ ¶";
+} 
+
+=======================================
+	#include <iostream>
+#include <string>
+#include <io.h>
+#include <fcntl.h>
+
+//std::wcout << L" ▌ ▐ ░ ▒ ▓ ▬ "<<std::endl;
+
+int main()
+
+{
+	//_setmode(_fileno(stdout), _O_U16TEXT);
+
+	int const size = 9;
+	int value[size], enteredIndex, indexCount;
+	std::string valuee[size];
+	
+
+	// изначальная прорисовка блоков
+
+	indexCount = -1;
+
+	for (size_t i = 0; i < size; i++)
+	{
+		value[i] = 0 + i; valuee[i] = std::to_string(value[i]);
+	}
+
+	std::wcout << " \n\n\t\t";
+
+	for (size_t i = 0; i < 3; i++)
+	{
+		for (size_t i = 0; i < 3; i++)
+		{
+			indexCount++;
+			std::cout << " [" << valuee[indexCount] << "]  ";
+		} std::wcout << " \n\n\t\t";
+	}
+
+	// подмена знаков в блоках
+
+	do
+	{
+
+		std::wcout << "\n\n\t Enter chosen index here: ";
+		std::wcin >> enteredIndex;
+
+		switch (enteredIndex)
+		{
+		case 0:valuee[enteredIndex] = "\x1B[91m#\033[0m"; break;
+		case 1:valuee[enteredIndex] = "\x1B[91m#\033[0m"; break;
+		case 2:valuee[enteredIndex] = "\x1B[91m#\033[0m"; break;
+		case 3:valuee[enteredIndex] = "\x1B[91m#\033[0m"; break;
+		case 4:valuee[enteredIndex] = "\x1B[91m#\033[0m"; break;
+		case 5:valuee[enteredIndex] = "\x1B[91m#\033[0m"; break;
+		case 6:valuee[enteredIndex] = "\x1B[91m#\033[0m"; break;
+		case 7:valuee[enteredIndex] = "\x1B[91m#\033[0m"; break;
+		case 8:valuee[enteredIndex] = "\x1B[91m#\033[0m"; break;
+		default: return 0; break;
+			
+		}
+
+		indexCount = -1;
+		std::wcout << " \n\n\t\t";
+
+		for (size_t i = 0; i < 3; i++)
+		{
+			for (size_t i = 0; i < 3; i++)
+			{
+				indexCount++;
+				std::cout << " [" << valuee[indexCount] << "]  ";
+			} std::wcout << " \n\n\t\t";
+		}
+
+	} while (enteredIndex != '11');
+
+
+	return 0;
 } 
